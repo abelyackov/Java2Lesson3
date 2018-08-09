@@ -9,22 +9,24 @@ public class Phonebook {
 
     public void add(String lastName, int number) {
 
-        if (phonebook.keySet().equals(lastName))
+        if (phonebook.containsKey(lastName))
             phonebook.get(lastName).add(number);
         else {
-            ArrayList<Integer> arrayList = new ArrayList<>();
-            arrayList.add(number);
-            phonebook.put(lastName,arrayList);
+            ArrayList<Integer> lastname = new ArrayList<>();
+            lastname.add(number);
+            phonebook.put(lastName, lastname);
         }
-        System.out.println(phonebook.keySet());
 
     }
 
-    public Collection<ArrayList<Integer>> get(String lastName) {
-        return phonebook.values();
-    }
-
-    private String toString(ArrayList<Integer> number) {
-        return String.valueOf(number);
+    public void get(String lastName) {
+        Set<Map.Entry<String, ArrayList<Integer>>> set = phonebook.entrySet();
+        for (Map.Entry<String, ArrayList<Integer>> o : set) {
+            if (o.getKey().equalsIgnoreCase(lastName)) {
+                System.out.println(lastName + ": ");
+                System.out.println(o.getValue());
+            }
+        }
     }
 }
+

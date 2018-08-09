@@ -6,7 +6,7 @@ public class Task2 {
 
         phonebook.add("Иванов", 000000);
         phonebook.add("Иванов", 111111);
-        phonebook.add("Петров", 222222);
+        phonebook.add("Петров", 22222);
         phonebook.add("Сидоров", 333333);
         phonebook.add("Иванов", 444444);
         phonebook.add("Иванов", 555555);
@@ -15,9 +15,9 @@ public class Task2 {
         phonebook.add("Петров", 888888);
         phonebook.add("Сидоров", 999999);
 
-        System.out.println(phonebook.get("Иванов"));
-        System.out.println(phonebook.get("Петров"));
-        System.out.println(phonebook.get("Сидоров"));
-        System.out.println(phonebook.get("Смирнов"));
+        phonebook.get("Иванов");
+        phonebook.get("Петров");
+        phonebook.get("Сидоров");
+        phonebook.get("Смирнов");
     }
 }
