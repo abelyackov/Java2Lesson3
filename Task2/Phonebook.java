@@ -12,9 +12,9 @@ public class Phonebook {
         if (phonebook.containsKey(lastName))
             phonebook.get(lastName).add(number);
         else {
-            ArrayList<Integer> lastname = new ArrayList<>();
-            lastname.add(number);
-            phonebook.put(lastName, lastname);
+            ArrayList<Integer> arrayList = new ArrayList<>();
+            arrayList.add(number);
+            phonebook.put(lastName, arrayList);
         }
 
     }
